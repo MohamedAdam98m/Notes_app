@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:notes_app/view/edit_note.dart';
+import 'package:notes_app/widgets/delete_dialog.dart';
 import '../controller/home_page_controller.dart';
 
 class SingleNote extends StatelessWidget {
@@ -54,7 +55,7 @@ class SingleNote extends StatelessWidget {
                     ),
                     Text(
                       note,
-                      style: const TextStyle(fontSize: 10),
+                      style: const TextStyle(fontSize: 11),
                       maxLines: 4,
                     ),
                   ],
@@ -66,9 +67,10 @@ class SingleNote extends StatelessWidget {
                       children: [
                         IconButton(
                           onPressed: () async {
-                            int response = await controller
-                                .deleteNote("${controller.notes[index]['id']}");
-                            print(response);
+                           await deleteDialog("${controller.notes[index]['id']}" , controller);
+                            // int response = await controller
+                            //     .deleteNote("${controller.notes[index]['id']}");
+                            // print(response);
                           },
                           icon: Icon(
                             Icons.delete,

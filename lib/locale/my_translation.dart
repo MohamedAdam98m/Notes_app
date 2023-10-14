@@ -29,6 +29,9 @@ class MyTranslation implements Translations {
           "addNewNoteMsg": "تمت اضافة الملاحظة",
           "deleteNoteMsg": "تم حذف الملاحظة",
           "editNoteMsg": "تم تعديل الملاحظة",
+          "exitDialog": "هل تريد الخروج ؟",
+          "yes": "نعم",
+          "deleteDialog": "هل تريد حذف الملاحظة ؟",
         },
         "en": {
           "popAlert": "Alert",
@@ -56,6 +59,9 @@ class MyTranslation implements Translations {
           "addNewNoteMsg": "the Note was Added",
           "deleteNoteMsg": "the Note was Deleted",
           "editNoteMsg": "the Note was Modified",
+          "exitDialog": "Do You want to Exit?",
+          "yes": "Yes",
+          "deleteDialog": "Do You want to Delete Note ?",
         },
       };
 }

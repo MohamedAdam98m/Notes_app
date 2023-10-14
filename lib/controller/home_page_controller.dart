@@ -39,6 +39,7 @@ class HomePageController extends GetxController {
     if (response != null) {
       notes.removeWhere((note) => note['id'] == "$id");
       await getNotes();
+      Get.back();
       noteSnackBar(type: "delete");
     } else {
       print(response);

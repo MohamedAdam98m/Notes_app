@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:notes_app/controller/home_page_controller.dart';
 import 'package:notes_app/view/add_note.dart';
 import 'package:notes_app/view/settings_page.dart';
+import 'package:notes_app/widgets/exit_dialog.dart';
 import 'package:notes_app/widgets/floating_acttion_btn.dart';
 
 import '../widgets/note_builder.dart';
@@ -24,10 +25,7 @@ class HomePage extends StatelessWidget {
           onTap: () => Get.to(() => const AddNote()),
         ),
         body: WillPopScope(
-          onWillPop: () async {
-            Get.defaultDialog(title: "popAlert".tr);
-            return true;
-          },
+          onWillPop: () async => exitDialog(),
           child: GetBuilder<HomePageController>(
               // init: HomePageController(),
               builder: (controller) {
